@@ -1,0 +1,363 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    line-height: 50px;
+}
+
+/* Header Styling */
+header {
+    background-color: black;
+    color: #fff;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 34px;
+    padding-top: 10px;
+    padding-bottom: -9px;
+    padding-left: 600px;
+    
+}
+
+header .login a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header .login a:hover {
+    background-color: green;
+}
+
+.lbtn {
+    font-size: 18px;
+    padding: 3px 6px;
+    margin-right: 5px;
+    border-radius: 18px;
+    border: none;
+    background-color: #555;
+    box-sizing: border-box;
+}
+
+.lbtn:hover {
+    background-color: green;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    display: none;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: antiquewhite;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 550px;
+}
+
+.popup-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.popup-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.popup-secondary-button {
+    background-color: #f1f1f1;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#google-signup {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+#close-popup {
+    margin-top: 20px;
+    width: 90px;
+    height: 50px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border-radius: 15       px;
+}
+
+
+/* Sidebar Styling */
+#sidebar {
+    background-color: #01262f;
+    color: #fff;
+    position: fixed;
+    line-height: 30px;
+    font-size: 20px;
+    top: 50px; /* Adjust according to the header height */
+    left: 0;
+    width: 240px;
+    height: calc(100% - 50px); /* Adjust according to the header height */
+    padding-top: 20px;
+    transform: translateX(-240px);
+    transition: transform 0.3s ease;
+}
+
+#sidebar.active {
+    transform: translateX(0);
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 10px 20px;
+    position: relative;
+}
+
+#sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    background-color: #043c4b;
+}
+
+#sidebar ul li ul.subnav {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #043c4b;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 240px;
+    border-radius: 5px;
+}
+
+#sidebar ul li:hover ul.subnav,
+#sidebar ul li:active ul.subnav {
+    display: block;
+}
+
+#sidebar ul li ul.subnav li {
+    padding: 10px;
+}
+
+#menu-toggle {
+    background-color: black;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+#menu-toggle:active {
+    transform: rotate(180deg);
+    transition: transform 0.7s ease;
+}
+
+/* Main Styling */
+main {
+    margin-top: 70px; /* Adjust to provide space for the fixed header */
+    margin: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.icon{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-top: 15px;
+    width: 180px;
+    height: 150px;
+}
+
+#text {
+    background-color: antiquewhite;
+    border-color: antiquewhite;  
+    border-radius: 10px;
+    line-height: 30px;
+}
+.text1 {
+    padding: 30px;
+    margin: 15px;
+    width: 100%;
+    background-color: antiquewhite;
+    border-color: antiquewhite;  
+    border-radius: 10px;
+    line-height: 30px;
+}
+.box {
+    background-color:white;
+    border-radius: 10px;
+    line-height: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 10px;
+    margin: 10px;
+}   
+
+.resource-center {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.icon-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows icons to wrap onto multiple lines if needed */
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.icon img {
+    max-width: 120px; /* Adjust to a smaller size for better display */
+    height: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.6rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+
+}
+
+@media (max-width: 768px) {
+    .icon-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon img {
+        max-width: 80px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: antiquewhite;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
